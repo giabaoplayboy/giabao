@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class coso
+{
+protected:
+	int x, y;
+public:
+	coso()
+	{
+		x = 1;
+		y = 1;
+	}
+	virtual void showx(){}
+	virtual void showy(){}
+};
+class kethua : public coso
+{
+	void showx()
+	{
+		cout << "gia tri cua x la : " << x << endl;
+	}
+	void showy()
+	{
+		cout << "gia tri cua y la : " << y << endl;
+	}
+};
+int main()
+{
+	/*coso oj1;
+	coso* p;
+	p = &oj1;*/
+	coso* p;
+	kethua oj2;
+	p = &oj2;
+	p->showx();
+	p->showy();
+
+	return 0;
+}
